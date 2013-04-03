@@ -7,7 +7,6 @@
 	<packaging>apklib</packaging>
 	<name>Android-PullToRefresh Library</name>
 	<version>2.1.2-SNAPSHOT</version>
-
 	
 	<dependencies>
         <dependency>
@@ -25,18 +24,19 @@
 	</dependencies>
 
 	<build>
+	<sourceDirectory>${project.basedir}/src/</sourceDirectory>
         <plugins>
             <plugin>
                 <groupId>com.jayway.maven.plugins.android.generation2</groupId>
                 <artifactId>android-maven-plugin</artifactId>
+		<version>3.5.1</version>
                 <configuration>
                     <sdk>
                         <!-- platform or api level (api level 4 = platform 1.6)-->
-                        <platform>17</platform>
+                        <platform>16</platform>
                     </sdk>
                 </configuration>
                 <extensions>true</extensions>
             </plugin>
-            
 		</plugins>
 	</build></project>
