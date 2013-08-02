@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <merge xmlns:android="http://schemas.android.com/apk/res/android" >
 
-    <FrameLayout
+    <RelativeLayout
         android:id="@+id/fl_inner"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -11,9 +11,11 @@
         android:paddingTop="@dimen/header_footer_top_bottom_padding" >
 
         <FrameLayout
+            android:id="@+id/pull_to_refresh_image_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="left|center_vertical" >
+            android:layout_centerVertical="true"
+            android:layout_gravity="left" >
 
             <ImageView
                 android:id="@+id/pull_to_refresh_image"
@@ -34,9 +36,10 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@id/pull_to_refresh_image_container"
             android:gravity="center_horizontal"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/pull_to_refresh_text"
@@ -54,6 +57,6 @@
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:visibility="gone" />
         </LinearLayout>
-    </FrameLayout>
+    </RelativeLayout>
 
 </merge>
